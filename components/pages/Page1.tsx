@@ -1,8 +1,7 @@
-import React, { Dispatch, SetStateAction, useState } from "react";
+import React, { Dispatch, SetStateAction } from "react";
 import { BiSolidTree } from "react-icons/bi";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
 import toast from "react-hot-toast";
 
 const Page1 = ({ setPage, name, setName }: { setPage: Dispatch<SetStateAction<number>>; name: string; setName : Dispatch<SetStateAction<string>> }) => {
