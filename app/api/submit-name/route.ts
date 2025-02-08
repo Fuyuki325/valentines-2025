@@ -5,7 +5,7 @@ export async function POST(req: Request) {
   const obj = await req.json();
   const name = obj.name
   const present = obj.present
-  const uri = process.env.MONGODB_URI;
+  const uri = process.env.MONGODB_URI ?? "";
   const client = new MongoClient(uri);
   try {
     await client.connect();
