@@ -15,6 +15,7 @@ export async function POST(req: Request) {
 
     return NextResponse.json({ message: `${name}: Name submitted successfully! ${present} present` });
   } catch (error) {
+    console.log(error)
     return NextResponse.json({ message: `${error}: Name not submitted!` })
   } finally {
     await client.close();
