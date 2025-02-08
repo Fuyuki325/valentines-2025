@@ -65,7 +65,7 @@ const Page3 = ({
             {name}, Will you be my valentine?
           </h1>
           <p className="text-xl">
-            {name}、私とバレンタインを過ごしてくれますか？
+            {name}さん、私とバレンタインを過ごしてくれますか？
           </p>
           <p className="text-md">Try the &quot;No&quot; button LOL</p>
           <p className="text-md mb-8">Noのボタンを試してみてwww</p>

@@ -153,7 +153,7 @@ const Page2 = ({
         <DialogContent>
           <DialogHeader>
             <DialogTitle className="text-center text-2xl font-bold text-gray-900">
-              Are you absolutely sure? 本当によろしいでしょうか？
+              Are you sure? 本当によろしいでしょうか？
             </DialogTitle>
             {displayPresent()}
             <DialogDescription className="text-center mt-4 text-lg text-gray-700">
