@@ -15,28 +15,11 @@ export async function POST(req: Request) {
 
     await collection.insertOne({ name, present });
 
-    return NextResponse.json(
-      { message: `${name}: Name submitted successfully! ${present} present` },
-      { headers: corsHeaders }
-    );
+    return NextResponse.json({
+      message: `${name}: Name submitted successfully! ${present} present`,
+    });
   } catch (error) {
     console.error("MongoDB Error:", error);
-    return NextResponse.json(
-      { message: "Error: Name not submitted!" },
-      { headers: corsHeaders, status: 500 }
-    );
+    return NextResponse.json({ message: "Error: Name not submitted!" });
   }
 }
-
-// Handle CORS Preflight Requests
-export function OPTIONS() {
-  return new Response(null, { headers: corsHeaders });
-}
-
-// CORS Headers
-const corsHeaders = {
-  "Content-Type": "application/json",
-  "Access-Control-Allow-Origin": "*", // Allows all origins
-  "Access-Control-Allow-Methods": "POST, GET, OPTIONS",
-  "Access-Control-Allow-Headers": "Content-Type",
-};
