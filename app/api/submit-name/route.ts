@@ -13,7 +13,7 @@ export async function POST(req: Request) {
     const collection = database.collection("collectionFirst");
     await collection.insertOne({ name, present });
 
-    return NextResponse.json({ message: `${name}: Name submitted successfully!` });
+    return NextResponse.json({ message: `${name}: Name submitted successfully! ${present} present` });
   } catch (error) {
     return NextResponse.json({ message: `${error}: Name not submitted!` })
   } finally {
